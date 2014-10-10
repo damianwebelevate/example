@@ -1,0 +1,236 @@
+Download git bash from: http://git-scm.com/download/win (automatic download)
+
+run the installer (run as administrator if on later versions of windows right click the installer (.exe) and select run as administrator)
+
+PLEASE GO THROUGH ONE SCREEN AT A TIME
+
+select next to accept license agreement
+
+select next to accept the default locations on set up eg: c:/programs etc.
+
+ON THE: select components SCREEN
+
+select additional icons 
+and under that:- In the Quick Launch >>>>click radio button
+
+Windows Explorer Integration >>>>>is already selected so under this select:
+Simple Context Menu
+Git Bash Here
+>>>>click radio buttons
+
+select next to complete installation
+
+it will ask to launch gitbash now uncheck and select next.
+
+Installation should be complete.
+
+When done on your keyboard press the windows button and the r key at the same time
+
+this opens the run command
+
+type-> 
+cmd
+
+Press Enter
+
+this opens the windows command line shell
+
+type-> 
+git --version
+
+Response:
+you should see something like this:
+git version 1.9.4.mysgit.1
+
+If something went wrong with the above install open gitbash.
+
+and type-> 
+git –-version
+
+Note: all git commands start with git
+
+go to github.com and create an account.
+
+Once done open a text file (on your desktop) to keep the following details so that you can remember them and its easier to follow.
+
+
+save your email username and password in your text file.
+For example:
+
+USERNAME:
+your_user_name
+
+PASSWORD:
+your_password
+
+
+
+Back to github...
+on github create a new repository
+(on top of page beside username the + icon => New repository)
+or once logged in paste this to your address bar: https://github.com/new
+
+for Repository name:
+
+call it something unique and use underscores for spaces and NO /// slashes
+
+example: my_first_git_repo
+
+add a description for it 
+
+ensure that you select: Initialize this repository with a README radio button
+
+(optional) add a license if you want to just add MIT License
+
+(optional) GitIgnore
+Note: GitIgnore allows you to specify which files or type of files you want your repository to ignore -literally :-)
+
+Select Create repository (green button)
+
+this opens your new repository 
+
+copy the link to this from the task bar and save to your text document.
+
+for example: https://github.com/your_user_name/your_repository_name
+
+for example:
+USERNAME:
+your_user_name
+
+PASSWORD:
+your_password
+
+PULL:
+https://github.com/your_user_name/your_repository_name
+
+ORIGIN:
+https://github.com/your_user_name/your_repository_name.git
+
+You will need this information soon so keep your text file open and minimise your browser.
+
+BACK TO cmd shell
+
+in the shell you can see the path you are in for example:
+
+C:\Documents and Settings\Owner>
+
+the locations in this path will ALWAYS be different so for us we want to navigate up to the root of the C:\ drive like so:
+
+type-> 
+cd .. 
+and press enter
+
+repeat this until you are at C:\>
+
+Note: Pressing the up arrow key will allow you to use commands that you already entered
+
+type->MKDIR first
+
+Note: first is the name of a folder and MKDIR is create a directory
+
+For a moment go to your c drive and you will now see a folder called first there.
+
+Back to cmd
+type-> 
+cd /first
+
+your path now is:
+
+C:\first>
+
+type-> 
+git init
+
+this creates/initialises a local repository.
+
+Response would be:
+Initialized empty GIT repository in C:/first/.git/
+
+Now we set up some GLOBAL attributes note you will do this only once:
+
+keep your text file open for reference
+
+at the cmd:
+
+type->
+git config --global user.name "Your_User_Name"
+
+type->
+git config --global user.email "Your_User_Email"
+
+type->
+git config --global core.autocrlf false 
+
+type->
+git config --global core.safecrlf true 
+
+type->
+git pull https//github.com/your_user_name/your_repository_name
+
+you have now connected your local repository to your on line one
+
+to check have a look inside the first folder and you should see a README.md file
+
+while you are in this folder create a new text file and name it.
+
+back to cmd
+
+type->
+git status
+
+this returns the files that have been added and or modified
+
+type->
+git add "the_name_of_the_file_you_just_created.txt"
+
+this is referred to as staging your files so to complete...
+
+for the next step ensure you use quotes “” and the .git at the end like so:
+type->
+git remote add origin "https://github.com/your_user_name/your_repository_name.git"
+
+
+the next is to say to git yes I want to use these files and send them up to the server.  Please ensure you use a comment in quotes “” as in the example below. This is a note on what you are doing.
+
+Type->
+git commit -m "My first commit"
+
+type->
+git push origin master
+
+wait.....
+
+1st response enter your username
+type->
+your_user_name
+2nd response enter your password
+type->
+your_password
+
+Note: the password will not show up as you type it
+
+you should get a response that has no errors
+
+go to your browser and on the git page refresh and your file is up there on line.
+
+Cool enough any Questions?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
